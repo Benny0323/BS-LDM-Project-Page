@@ -267,58 +267,19 @@
 </div>
 </section>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Copy Button</title>
-    <style>
-        .code-container {
-            position: relative;
-            background-color: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
-            font-family: monospace;
-            border: 1px solid #ddd;
-            white-space: pre-wrap;
-            overflow-x: auto;
-        }
-        .copy-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #ffffff;
-            border: 1px solid #ddd;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 12px;
-        }
-        .copy-button:hover {
-            background: #f0f0f0;
-        }
-    </style>
-</head>
-<body>
-
-<div class="code-container">
-    python Hybridloss_autoencoder.py
-    <button class="copy-button" onclick="copyToClipboard()">Copy</button>
-</div>
-
-<script>
-    function copyToClipboard() {
-        // Get the text content of the code container
-        const codeContainer = document.querySelector('.code-container');
-        const text = codeContainer.textContent || codeContainer.innerText;
-
-        // Copy the text to clipboard
-        navigator.clipboard.writeText(text).catch(err => {
-            console.error('Failed to copy: ', err);
-        });
-    }
-</script>
-
-</body>
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{sun2024bs,
+  title={BS-LDM: Effective Bone Suppression in High-Resolution Chest X-Ray Images with Conditional Latent Diffusion Models},
+  author={Sun, Yifei and Chen, Zhanghao and Zheng, Hao and Ge, Ruiquan and Liu, Jin and Min, Wenwen and Elazab, Ahmed and Wan, Xiang and Wang, Changmiao},
+  journal={arXiv preprint arXiv:2412.15670},
+  year={2024}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
 
   <footer class="footer">
   <div class="container">
