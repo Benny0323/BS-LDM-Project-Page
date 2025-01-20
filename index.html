@@ -267,20 +267,44 @@
 </div>
 </section>
 
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
+<!-- BibTex citation -->
+<section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@article{sun2024bs,
+        <h2 class="title">BibTeX</h2>
+        <pre id="bibtex-content"><code>
+@article{sun2024bs,
   title={BS-LDM: Effective Bone Suppression in High-Resolution Chest X-Ray Images with Conditional Latent Diffusion Models},
   author={Sun, Yifei and Chen, Zhanghao and Zheng, Hao and Ge, Ruiquan and Liu, Jin and Min, Wenwen and Elazab, Ahmed and Wan, Xiang and Wang, Changmiao},
   journal={arXiv preprint arXiv:2412.15670},
   year={2024}
 }</code></pre>
+        <button id="copy-btn" class="button is-primary">Copy</button>
     </div>
 </section>
-<!--End BibTex citation -->
+<!-- End BibTex citation -->
 
+<script>
+    // JavaScript to handle the copy-to-clipboard functionality
+    document.getElementById('copy-btn').addEventListener('click', function () {
+        // Select the text content
+        const bibtexContent = document.getElementById('bibtex-content').innerText;
+        
+        // Create a temporary textarea to copy content
+        const tempTextarea = document.createElement('textarea');
+        tempTextarea.value = bibtexContent;
+        document.body.appendChild(tempTextarea);
+
+        // Select and copy text
+        tempTextarea.select();
+        document.execCommand('copy');
+
+        // Remove the temporary textarea
+        document.body.removeChild(tempTextarea);
+
+        // Provide feedback (optional)
+        alert('BibTeX copied to clipboard!');
+    });
+</script>
 
   <footer class="footer">
   <div class="container">
